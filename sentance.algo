@@ -1,0 +1,43 @@
+ALGORITHM sentence
+VAR
+    char,espace,words,vowels,i,j:integer;
+    S[]: string;
+ MAJ,MIN: tab[1..26] string;
+ vowels: tab[1..6] string ;
+BEGIN
+    char:=0;
+    espace:=0;
+    words:=1;
+    vow:=0;
+    MAJ={'A','B', ... 'Z'};
+    MIN={'a','b', ... 'z'};
+    vowels={'a','o','e','u','y','i'};
+    write("write a sentance:");
+    read(S);
+    for i from 1 to  s.Length do 
+       for j from 1 to 26 do
+            if(MAJ[j] = S[i]) then
+                S[i] := MIN[j];
+            end if
+        end for
+      end for
+     for i from 1 to s.length do 
+     for j from 1 to vowels.length do 
+         if(65<s[i].charCodeAt<91) then 
+              char:= char+1;
+           end if
+            if (str[i]=" ")then 
+               espace:=espace+1;
+               word:=word+1;
+           end if
+           if (s[i]=vowels[j]) then 
+               vow:= vow+1;
+         end if 
+     end for
+     end for
+   write (espace)
+   write (word)
+   write (vowels)
+   write (s.length-espace-1)
+
+END
